@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$font-size-large: 2.1rem;
+$font-size-large-medium: 1.6rem;
+$font-size-medium: 1rem;
+@font-face {
+  font-family: "Heading";
+  src: url("../../assets/futura/Futura\ Std\ Book.ttf");
+}
+@font-face {
+  font-family: "Paragraph";
+  src: url("../../assets/futura/Futura\ Bk\ BT\ Book.ttf");
+}
+
+@font-face {
+  font-family: "Bold";
+  src: url("../../assets/futura/Futura\ Std\ Heavy.ttf");
+}
+body {
+  background: url(../../assets/background.png);
+  margin: auto 1.5rem;
+}
+h1 {
+  font-size: $font-size-large;
+  font-family: "Heading";
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 1.4rem;
+}
+h2 {
+  font-size: $font-size-large-medium;
+  font-family: "Heading";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+h3 {
+  font-size: 1rem;
+  font-family: "Heading";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  // margin-bottom: 2rem;
+  // border: 1px solid red;
+  // padding-left: 1rem;
+}
+p {
+  font-family: "Paragraph";
+  font-size: $font-size-medium;
+  margin-bottom: 2rem;
+}
+a {
+  font-family: "Paragraph";
+  font-size: $font-size-medium;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: auto -1.5rem;
+  svg {
+    width: 30px;
+  }
+}
+nav {
+  display: none;
+}
+
+.landing-page {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+.hero-text {
+  h1 {
+    margin-bottom: 0.2rem;
+    margin-right: -1.5rem;
+  }
+}
+.hero-image {
+  display: flex;
+  margin: auto -1.5rem;
+  img {
+    width: 85%;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-medium;
+    writing-mode: vertical-rl;
+  }
+}
+.btnn {
+  background: black;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin: auto -1.5rem;
+  width: 100%;
+  margin: auto;
+  a {
+    color: white;
+    font-family: "Paragraph";
+    text-decoration: none;
+    font-size: $font-size-medium;
+  }
+}
+.hair,
+.skin,
+.bridal {
+  display: flex;
+  flex-direction: column;
+}
+.navigation {
+  img {
+    padding-left: 2rem;
+    width: 3rem;
+  }
+  padding: 1rem;
+  align-self: flex-end;
+}
+.heading {
+}
+.dropdwn {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  padding-left: 0;
+  margin-bottom: 1rem;
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  img {
+    width: 2rem;
+    margin-left: 0.5rem;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.navigation {
+  img {
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.carousell {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  gap: 1.3rem;
+  //margin: auto -1.5rem;
+}
+.caro-text {
+  min-width: 65vw;
+  word-wrap: no-wrap;
+  h3 {
+    margin-bottom: 2rem;
+    border: none;
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 20rem;
+  }
+  p {
+    margin: 0.5rem 0;
+  }
+  h5 {
+    font-family: "Bold";
+    margin-bottom: 0;
+    font-size: $font-size-medium;
+    margin-bottom: 1rem;
+  }
+}
+.about-belle-salon {
+  img {
+    width: 100%;
+  }
+}
+
+.imgg {
+  img {
+    object-fit: cover;
+    width: 100%;
+    // height: 22rem;
+  }
+  p {
+    font-family: "Paragraph";
+    font-size: $font-size-medium;
+    writing-mode: vertical-rl;
+  }
+}
+.testimonials {
+  img {
+    width: 100%;
+  }
+}
+.namey {
+  margin: 1.4rem auto;
+  display: flex;
+  justify-content: space-between;
+  img {
+    width: 10%;
+  }
+}
+.appointment {
+  img {
+    width: 100%;
+  }
+}
+.maill {
+  padding: 1rem;
+  padding-left: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 100%;
+  border-right: none;
+  background: #000;
+  &::placeholder {
+    color: #fff;
+    font-family: "Paragraph";
+    font-size: $font-size-medium;
+  }
+}
+.offer-mail {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  img {
+    width: 3.1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-left: none;
+  }
+}
+footer {
+  background: #000;
+  margin: auto -1.5rem;
+  padding: 1.5rem;
+  color: #fff;
+  margin-top: 5rem;
+  h3 {
+    color: #fff;
+    font-family: "Heading";
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+  p {
+    color: #fff;
+    font-family: "Paragraph";
+    font-size: $font-size-medium;
+  }
+  a {
+    color: rgb(0, 110, 255);
+  }
+}
+.scl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  img {
+    width: 30px;
+  }
+}
+// dropdown
+.optn {
+  font-family: "Heading";
+  font-size: 1.3rem;
+  details {
+    position: relative;
+    // width: fit-content;
+    margin-right: 1rem;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    width: 100%;
+  }
+
+  details[open] {
+    z-index: 1;
+  }
+
+  summary {
+    padding: 0.7rem;
+    padding-left: 1rem;
+    display: flex;
+    // flex-direction: row;
+    align-items: center;
+    width: inherit;
+    gap: 1em;
+    // margin: 1em auto;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    list-style: none;
+    // border: 1px solid black;
+    background: rgba(0, 0, 0, 0.13);
+    width: fit-content;
+    border-radius: 1px;
+    //   box-shadow: rgba(0, 0, 0, 0.35) 1px 2px 15px;
+    &:hover {
+      // box-shadow: rgba(0, 0, 0, 0.35) 1px 2px 15px;
+      // background: #dabb8c;
+    }
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details[open] summary:before {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform ease-in-out 500ms;
+  }
+
+  summary:after {
+    content: "";
+    display: inline-block;
+    float: right;
+    width: 0.5rem;
+    height: 0.5rem;
+    // arrow
+    border-bottom: 1px solid currentColor;
+    border-left: 1px solid currentColor;
+    border-bottom-left-radius: 2px;
+    transform: rotate(-45deg) translate(50%, 0%);
+    transform-origin: center center;
+    transition: all ease-in-out 0.3s;
+  }
+
+  summary:focus {
+    outline: none;
+  }
+
+  details[open] summary:after {
+    transform: rotate(135deg) translate(0%, 0%);
+  }
+
+  ul {
+    font-family: "Paragraph";
+    font-size: $font-size-medium;
+    width: 100vw;
+    background: #000;
+    color: #fff;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    margin: auto -1.5rem;
+    padding: 1rem;
+    // border-radius: 5px;
+    max-height: 70vh;
+    overflow-y: auto;
+    list-style: none;
+    border-bottom: 10px solid rgba(78, 78, 78, 0.555);
+  }
+
+  li {
+    margin: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  li:first-child {
+    padding-top: 0;
+  }
+
+  li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  /* FAKE SELECT */
+
+  ul.list {
+    counter-reset: labels;
+  }
+
+  label {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    margin: auto 7rem;
+  }
+  header {
+    margin: auto -7rem;
+    // background: #000;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.98) 15%,
+        rgba(0, 0, 0, 0.98) 30%
+      ),
+      url("../../assets/scissor1.png");
+    nav {
+      display: block;
+      color: white;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      li {
+        font-family: "Paragraph";
+        padding-right: 3rem;
+        list-style: none;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  .landing-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    margin: auto -7rem;
+    // margin-bottom: 4vw;
+    place-items: center;
+    color: #fff;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.9) 15%,
+        rgba(0, 0, 0, 0.7) 30%
+      ),
+      url("../../assets/backy.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    .hero-text {
+    }
+    .hero-image {
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 50%;
+        opacity: 0.9;
+      }
+    }
+    .btnn {
+      display: none;
+    }
+  }
+  .heading {
+    // display: none;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .services {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: end start;
+    margin-top: 5rem;
+    img {
+      width: 80%;
+    }
+  }
+  .desktop1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    //margin: 7rem;
+  }
+  .about-belle-salon {
+    margin: 0 auto;
+    width: 80%;
+    img {
+      width: 100%;
+    }
+  }
+  .carousell {
+    width: 25vw;
+  }
+  .caro-text {
+    min-width: 30vw;
+  }
+  .testimonials {
+    width: 80%;
+    margin: 5rem auto 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+  .optn {
+    ul {
+      width: fit-content;
+    }
+  }
+  .appointment {
+    //margin: 7rem;
+    width: 50%;
+    margin: 5rem auto 0 0;
+    img {
+      display: none;
+    }
+    .offer-mail {
+      // width: 40%;
+      img {
+        display: block;
+      }
+    }
+  }
+
+  .offer-mail {
+    width: 50%;
+  }
+  footer {
+    margin: auto -7rem;
+    margin-top: 5rem;
+    padding: 5rem;
+    padding-bottom: 1rem;
+  }
+  .scl {
+    justify-content: center;
+    img {
+      margin: auto 1rem;
+    }
+  }
+  .desk {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .appointment {
+    display: none;
+  }
+}
