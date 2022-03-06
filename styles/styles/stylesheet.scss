@@ -62,54 +62,68 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  margin: auto -1.5rem;
+  
+  // margin: auto -1.5rem;
   svg {
     width: 30px;
   }
+  nav {
+    display: none;
+  }
 }
-nav {
+.hidee {
   display: none;
 }
-
+.showw {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  margin: auto -7rem;
+  background: rgba(0, 0, 0, 0.974);
+}
+.headerr {
+  display: none;
+}
 .landing-page {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-}
-.hero-text {
-  h1 {
-    margin-bottom: 0.2rem;
-    margin-right: -1.5rem;
+
+  .hero-text {
+    h1 {
+      margin-bottom: 0.2rem;
+      margin-right: -1.5rem;
+    }
   }
-}
-.hero-image {
-  display: flex;
-  margin: auto -1.5rem;
-  img {
-    width: 85%;
+  .hero-image {
+    display: flex;
+    margin: auto -1.5rem;
+    img {
+      width: 85%;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: $font-size-medium;
+      writing-mode: vertical-rl;
+    }
   }
-  p {
-    margin: 0;
-    padding: 0;
-    font-size: $font-size-medium;
-    writing-mode: vertical-rl;
-  }
-}
-.btnn {
-  background: black;
-  padding: 0.8rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 1rem;
-  margin: auto -1.5rem;
-  width: 100%;
-  margin: auto;
-  a {
-    color: white;
-    font-family: "Paragraph";
-    text-decoration: none;
-    font-size: $font-size-medium;
+  .btnn {
+    background: black;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin: auto -1.5rem;
+    width: 100%;
+    margin: auto;
+    a {
+      color: white;
+      font-family: "Paragraph";
+      text-decoration: none;
+      font-size: $font-size-medium;
+    }
   }
 }
 .hair,
@@ -406,14 +420,11 @@ footer {
     margin: auto 7rem;
   }
   header {
-    margin: auto -7rem;
-    // background: #000;
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.98) 15%,
-        rgba(0, 0, 0, 0.98) 30%
-      ),
-      url("../../assets/scissor1.png");
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    width: 100%;
+    margin: 0;
+
     nav {
       display: block;
       color: white;
@@ -424,7 +435,7 @@ footer {
       }
       li {
         font-family: "Paragraph";
-        padding-right: 3rem;
+        padding-right: 5rem;
         list-style: none;
         &:last-child {
           padding-right: 0;
@@ -435,6 +446,7 @@ footer {
   .landing-page {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     column-gap: 2rem;
     margin: auto -7rem;
     // margin-bottom: 4vw;
@@ -449,8 +461,6 @@ footer {
     background-size: cover;
     background-position: center;
 
-    .hero-text {
-    }
     .hero-image {
       justify-content: center;
       align-items: center;
@@ -461,6 +471,30 @@ footer {
     }
     .btnn {
       display: none;
+    }
+  }
+  .headerr-hide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #000;
+    margin: auto -7rem;
+    nav {
+      color: #fff;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        li {
+          padding-right: 3rem;
+          font-family: "Paragraph";
+        }
+      }
+    }
+    svg {
+      width: 30px;
     }
   }
   .heading {

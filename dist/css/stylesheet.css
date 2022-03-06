@@ -63,45 +63,60 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  margin: auto -1.5rem;
 }
 
 header svg {
   width: 30px;
 }
 
-nav {
+header nav {
+  display: none;
+}
+
+.hidee {
+  display: none;
+}
+
+.showw {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  margin: auto -7rem;
+  background: rgba(0, 0, 0, 0.974);
+}
+
+.headerr {
   display: none;
 }
 
 .landing-page {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.hero-text h1 {
+.landing-page .hero-text h1 {
   margin-bottom: 0.2rem;
   margin-right: -1.5rem;
 }
 
-.hero-image {
+.landing-page .hero-image {
   display: flex;
   margin: auto -1.5rem;
 }
 
-.hero-image img {
+.landing-page .hero-image img {
   width: 85%;
 }
 
-.hero-image p {
+.landing-page .hero-image p {
   margin: 0;
   padding: 0;
   font-size: 1rem;
   writing-mode: vertical-rl;
 }
 
-.btnn {
+.landing-page .btnn {
   background: black;
   padding: 0.8rem;
   display: flex;
@@ -113,7 +128,7 @@ nav {
   margin: auto;
 }
 
-.btnn a {
+.landing-page .btnn a {
   color: white;
   font-family: "Paragraph";
   text-decoration: none;
@@ -420,8 +435,10 @@ footer a {
     margin: auto 7rem;
   }
   header {
-    margin: auto -7rem;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.98) 15%, rgba(0, 0, 0, 0.98) 30%), url("../../assets/scissor1.png");
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    width: 100%;
+    margin: 0;
   }
   header nav {
     display: block;
@@ -434,7 +451,7 @@ footer a {
   }
   header nav li {
     font-family: "Paragraph";
-    padding-right: 3rem;
+    padding-right: 5rem;
     list-style: none;
   }
   header nav li:last-child {
@@ -443,6 +460,7 @@ footer a {
   .landing-page {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     column-gap: 2rem;
     margin: auto -7rem;
     place-items: center;
@@ -461,6 +479,30 @@ footer a {
   }
   .landing-page .btnn {
     display: none;
+  }
+  .headerr-hide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #000;
+    margin: auto -7rem;
+  }
+  .headerr-hide nav {
+    color: #fff;
+  }
+  .headerr-hide nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  .headerr-hide nav ul li {
+    padding-right: 3rem;
+    font-family: "Paragraph";
+  }
+  .headerr-hide svg {
+    width: 30px;
   }
   .heading {
     margin-top: 5rem;
