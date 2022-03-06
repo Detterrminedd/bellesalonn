@@ -61,8 +61,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  
+  padding: 1.3rem;
+  // box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   // margin: auto -1.5rem;
   svg {
     width: 30px;
@@ -78,17 +78,24 @@ header {
   display: flex;
   position: fixed;
   z-index: 1;
-  margin: auto -7rem;
+  margin: auto -1.5rem;
   background: rgba(0, 0, 0, 0.974);
+  animation: mymove 0.1s 1;
+  justify-content: space-between;
+  width: 100%;
 }
+
 .headerr {
   display: none;
 }
 .landing-page {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-
+  display: grid;
+  header {
+    // background: #000;
+    margin: auto -1.5rem;
+    margin-top: 0;
+  }
   .hero-text {
     h1 {
       margin-bottom: 0.2rem;
@@ -98,6 +105,7 @@ header {
   .hero-image {
     display: flex;
     margin: auto -1.5rem;
+    // background: red;
     img {
       width: 85%;
     }
@@ -124,6 +132,9 @@ header {
       text-decoration: none;
       font-size: $font-size-medium;
     }
+  }
+  .b {
+    display: none;
   }
 }
 .hair,
@@ -419,30 +430,6 @@ footer {
   body {
     margin: auto 7rem;
   }
-  header {
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    width: 100%;
-    margin: 0;
-
-    nav {
-      display: block;
-      color: white;
-      ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      li {
-        font-family: "Paragraph";
-        padding-right: 5rem;
-        list-style: none;
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-    }
-  }
   .landing-page {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -472,6 +459,39 @@ footer {
     .btnn {
       display: none;
     }
+    .a {
+      display: none;
+    }
+    .b {
+      display: block;
+    }
+  }
+  header {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    width: 100%;
+    margin: 0;
+
+    nav {
+      display: block;
+      color: white;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      li {
+        font-family: "Paragraph";
+        padding-right: 5rem;
+        list-style: none;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  .showw {
+    margin: auto -7rem;
   }
   .headerr-hide {
     display: flex;
@@ -583,5 +603,13 @@ footer {
   }
   .appointment {
     display: none;
+  }
+}
+@keyframes mymove {
+  from {
+    transform: rotateY(30deg);
+  }
+  to {
+    transform: rotateY(0deg);
   }
 }

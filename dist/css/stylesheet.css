@@ -62,7 +62,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1.3rem;
 }
 
 header svg {
@@ -81,8 +81,11 @@ header nav {
   display: flex;
   position: fixed;
   z-index: 1;
-  margin: auto -7rem;
+  margin: auto -1.5rem;
   background: rgba(0, 0, 0, 0.974);
+  animation: mymove 0.1s 1;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .headerr {
@@ -91,8 +94,12 @@ header nav {
 
 .landing-page {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+}
+
+.landing-page header {
+  margin: auto -1.5rem;
+  margin-top: 0;
 }
 
 .landing-page .hero-text h1 {
@@ -133,6 +140,10 @@ header nav {
   font-family: "Paragraph";
   text-decoration: none;
   font-size: 1rem;
+}
+
+.landing-page .b {
+  display: none;
 }
 
 .hair,
@@ -434,6 +445,35 @@ footer a {
   body {
     margin: auto 7rem;
   }
+  .landing-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 2rem;
+    margin: auto -7rem;
+    place-items: center;
+    color: #fff;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 15%, rgba(0, 0, 0, 0.7) 30%), url("../../assets/backy.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+  .landing-page .hero-image {
+    justify-content: center;
+    align-items: center;
+  }
+  .landing-page .hero-image img {
+    width: 50%;
+    opacity: 0.9;
+  }
+  .landing-page .btnn {
+    display: none;
+  }
+  .landing-page .a {
+    display: none;
+  }
+  .landing-page .b {
+    display: block;
+  }
   header {
     grid-column: 1/-1;
     grid-row: 1/2;
@@ -457,28 +497,8 @@ footer a {
   header nav li:last-child {
     padding-right: 0;
   }
-  .landing-page {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    column-gap: 2rem;
+  .showw {
     margin: auto -7rem;
-    place-items: center;
-    color: #fff;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 15%, rgba(0, 0, 0, 0.7) 30%), url("../../assets/backy.jpeg");
-    background-size: cover;
-    background-position: center;
-  }
-  .landing-page .hero-image {
-    justify-content: center;
-    align-items: center;
-  }
-  .landing-page .hero-image img {
-    width: 50%;
-    opacity: 0.9;
-  }
-  .landing-page .btnn {
-    display: none;
   }
   .headerr-hide {
     display: flex;
@@ -581,6 +601,15 @@ footer a {
   }
   .appointment {
     display: none;
+  }
+}
+
+@keyframes mymove {
+  from {
+    transform: rotateY(30deg);
+  }
+  to {
+    transform: rotateY(0deg);
   }
 }
 /*# sourceMappingURL=stylesheet.css.map */
